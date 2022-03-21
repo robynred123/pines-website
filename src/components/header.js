@@ -1,42 +1,63 @@
-import * as React from "react"
-import PropTypes from "prop-types"
+import React, { useState } from "react"
 import { Link } from "gatsby"
+import { cream, green, pink } from "../constants"
+import { LogoButton } from "./logoButton"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
+const siteTitle = "<RP />"
+const Header = () => {
+  return (
+    <header
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        background: green,
+        marginBottom: `1.45rem`,
+        flexDirection: "row",
+        flex: 1,
+        width: "100%",
+        padding: "10px",
+        alignItems: "center",
+        display: "flex",
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+      <div
+        style={{
+          width: "50%",
+          display: "flex",
+          textAlign: "center",
+          paddingTop: "15px",
+        }}
+      >
+        <h1>
+          <Link
+            to="/"
+            style={{
+              color: cream,
+              textDecoration: `none`,
+            }}
+          >
+            {siteTitle}
+          </Link>
+        </h1>
+      </div>
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+      <div
+        style={{
+          justifyContent: "flex-end",
+          width: "50%",
+          display: "flex",
+        }}
+      >
+        <LogoButton
+          onClick={"https://linkedin.com/in/robyn-pines-2a813850"}
+          icon={"LinkedIn"}
+        />
+        <LogoButton
+          onClick={"https://github.com/robynred123"}
+          icon={"GitHub"}
+        />
+        <LogoButton onClick={() => console.log("clicked!")} icon={"CV"} />
+      </div>
+    </header>
+  )
 }
 
 export default Header
