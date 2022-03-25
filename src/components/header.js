@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
-import { cream, green, pink } from "../constants"
+import { cream, green } from "../constants"
 import { LogoButton } from "./logoButton"
 
 const siteTitle = "<RP />"
@@ -16,6 +16,7 @@ const Header = () => {
         padding: "10px",
         alignItems: "center",
         display: "flex",
+        boxShadow: "0px 5px 0px #9E9E9E",
       }}
     >
       <div
@@ -54,7 +55,7 @@ const Header = () => {
           onClick={"https://github.com/robynred123"}
           icon={"GitHub"}
         />
-        <LogoButton onClick={() => console.log("clicked!")} icon={"CV"} />
+        <LogoButton onClick={"/cv"} icon={"CV"} />
       </div>
     </header>
   )
