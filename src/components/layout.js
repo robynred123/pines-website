@@ -11,9 +11,10 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import { peach } from "../constants"
+import { green, offWhite } from "../constants"
 
 const Layout = ({ children }) => {
+  const page = children[0].props.title
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,8 +25,19 @@ const Layout = ({ children }) => {
     }
   `)
 
+  console.log(page, data.site.siteMetadata)
+
+  const styling = () => {
+    if (page === "My CV") {
+      return
+    } else
+      return {
+        backgroundColor: offWhite,
+      }
+  }
+
   return (
-    <>
+    <div style={styling()}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -39,8 +51,9 @@ const Layout = ({ children }) => {
           style={{
             marginTop: `2rem`,
             display: "flex",
+            bottom: 0,
             justifyContent: "space-between",
-            color: peach,
+            color: green,
           }}
         >
           <h5>{new Date().getFullYear()} @ Robyn Pines</h5>
@@ -48,7 +61,7 @@ const Layout = ({ children }) => {
           <div style={{ width: "25vw" }} />
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
