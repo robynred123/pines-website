@@ -25,8 +25,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  console.log(page, data.site.siteMetadata)
-
   const styling = () => {
     if (page === "My CV") {
       return

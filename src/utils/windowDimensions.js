@@ -1,33 +1,38 @@
 import { useState, useEffect } from "react"
 
+export const isBrowser = () => typeof window !== "undefined"
+
 const getWindowDimensions = () => {
-  const { innerWidth: width, innerHeight: height } = window
-  return {
-    width,
-    height,
-  }
+  if (isBrowser()) {
+    const { innerWidth: width, innerHeight: height } = window
+    return {
+      width,
+      height,
+    }
+  } else
+    return {
+      width: 960,
+      height: 1200,
+    }
 }
 
 export const useWindowDimensions = () => {
-  if (typeof window === "undefined") {
-    return {
-      width: 1200,
-      height: 1200,
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  )
+
+  useEffect(() => {
+    if (!isBrowser) {
+      return
     }
-  } else {
-    const [windowDimensions, setWindowDimensions] = useState(
-      getWindowDimensions()
-    )
 
-    useEffect(() => {
-      const handleResize = () => {
-        return setWindowDimensions(getWindowDimensions())
-      }
+    const handleResize = () => {
+      return setWindowDimensions(getWindowDimensions())
+    }
 
-      window.addEventListener("resize", handleResize)
-      return () => window.removeEventListener("resize", handleResize)
-    }, [])
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
-    return windowDimensions
-  }
+  return windowDimensions
 }
