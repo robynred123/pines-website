@@ -4,8 +4,7 @@ import { Carousel } from "../components/carousel"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import useWindowDimensions from "../utils/windowDimensions"
-import { peach } from "../constants"
+import { useWindowDimensions } from "../utils/windowDimensions"
 
 const pageStyling = (content, width) => {
   switch (content) {
