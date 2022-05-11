@@ -5,9 +5,9 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
-  box-sizing: border-box;
   overflow-y: scroll;
-  display: flex;
+  min-width: 100vw;
+  margin: 0;
 }
 body {
   margin: 0;
@@ -20,17 +20,16 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+ /* -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";*/
 }
 article,
 aside,
 details,
 figcaption,
 figure,
-footer,
 main,
 menu,
 nav,
@@ -67,6 +66,22 @@ template {
   align-items: center;
   margin: 5%
 }
+
+/*Moves home content to column in the center*/
+@media only screen and (max-width: 1000px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+  .homeContent {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
 br {
   display: block;
   margin: 10px 0;

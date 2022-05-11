@@ -21,7 +21,6 @@ const bio = (
     Functions, Node.js. <br />
     Mentoring Focused. <br />
     Stem Ambassador. <br />
-    Bit of a nerd.
   </h2>
 )
 
