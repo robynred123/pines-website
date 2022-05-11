@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import { green, offWhite } from "../constants"
+import { green } from "../constants"
 
 const Layout = ({ children }) => {
   const page = children[0].props.title
@@ -25,17 +25,8 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const styling = () => {
-    if (page === "My CV") {
-      return
-    } else
-      return {
-        backgroundColor: offWhite,
-      }
-  }
-
   return (
-    <div style={styling()}>
+    <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -45,21 +36,21 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
+        <div
           style={{
-            marginTop: `2rem`,
-            display: "flex",
+            position: "absolute",
             bottom: 0,
-            justifyContent: "space-between",
             color: green,
+            textAlign: "center",
+            width: "80%",
           }}
         >
-          <h5>{new Date().getFullYear()} @ Robyn Pines</h5>
-          <h5>Welcome to the bottom of the page!</h5>
-          <div style={{ width: "25vw" }} />
-        </footer>
+          <div>
+            <h5>{new Date().getFullYear()} @ Robyn Pines</h5>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

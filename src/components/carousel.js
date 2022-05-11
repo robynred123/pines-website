@@ -10,26 +10,8 @@ const texts = [
   "Communicates Well Written & Verbally",
 ]
 
-export const Carousel = width => {
+export const Carousel = () => {
   const [textToShow, setTextToShow] = useState(texts[0])
-
-  const textStyling = () => {
-    if (width <= 800) {
-      return {
-        color: pink,
-        flexWrap: "wrap",
-        textAlign: "center",
-        padding: 15,
-      }
-    }
-    return {
-      color: pink,
-      flexWrap: "wrap",
-      textAlign: "center",
-      paddingTop: "25vh",
-      justifyContent: "center",
-    }
-  }
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -50,7 +32,17 @@ export const Carousel = width => {
 
   return (
     <div>
-      <h2 style={textStyling()}>{textToShow}</h2>
+      <h2
+        style={{
+          color: pink,
+          flexWrap: "wrap",
+          textAlign: "center",
+          paddingTop: "10%",
+          justifyContent: "center",
+        }}
+      >
+        {textToShow}
+      </h2>
     </div>
   )
 }

@@ -11,12 +11,10 @@ const Header = () => {
         background: green,
         marginBottom: `1.45rem`,
         flexDirection: "row",
-        flex: 1,
-        width: "100%",
+        width: "100vw",
         padding: "10px",
         alignItems: "center",
         display: "flex",
-        boxShadow: "0px 5px 0px #9E9E9E",
       }}
     >
       <div
