@@ -6,7 +6,7 @@ html {
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
   overflow-y: scroll;
-  min-width: 100vw;
+  min-width: 100%;
   margin: 0;
 }
 body {
@@ -55,7 +55,7 @@ template {
   display: none;
 }
 .home {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -14,7 +14,7 @@ const Header = () => {
         padding: "10px",
         alignItems: "center",
         display: "flex",
-        width: "90%",
+        width: "95%",
         marginRight: "1em",
         marginLeft: "1em",
       }}
