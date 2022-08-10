@@ -1,6 +1,0 @@
-export const pink = "#EA99A4"
-export const peach = "#F6C3A0"
-export const cream = "#FEE9D7"
-export const green = "#4CBDB2"
-export const purple = "#4B2344"
-export const offWhite = "#fff4eb"
