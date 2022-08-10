@@ -52,9 +52,13 @@ export const Home = () => {
       })}
      </div>
      <div className='home-cv-container'>
-        <a onClick={() => window.open("https://docs.google.com/document/d/1d_35XuZetaVdmdy162hWWf1-b40UCj8iRbHt2Q8da-4/edit?usp=sharing", "_blank")}>
-          <h5>Download my CV</h5> 
-        </a>
+      <button className='cv-button' onClick={() => window.open("https://docs.google.com/document/d/1d_35XuZetaVdmdy162hWWf1-b40UCj8iRbHt2Q8da-4/edit?usp=sharing", "_blank")}>
+        <h5 className='cv-button-text'>View My CV</h5> 
+      </button>
+      <div className='home-cv-text'>
+      <h3>This button will open a new window to a Google Docs copy of my CV. <br/>
+        This document will be the most up to date copy of my CV, <br/> however if you would like to know more about what I'm currently working on, please reach out via LinkedIn or Email</h3>
+      </div>
      </div>
      </div>
     </Layout>

@@ -25,6 +25,7 @@ const LogoButton = ({ icon, onClick }) => {
 
   return (
     <a
+    className='button'
       onClick={() => window.open(onClick, '_blank')}
     >
       {determineIcon(icon)}
