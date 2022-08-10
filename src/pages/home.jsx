@@ -57,7 +57,9 @@ export const Home = () => {
       </button>
       <div className='home-cv-text'>
       <h3>This button will open a new window to a Google Docs copy of my CV. <br/>
-        If you would like to know more about what I'm currently working on, please reach out via LinkedIn or Email</h3>
+        If you would like to know more about what I'm currently working on, please reach out via {''}
+        <a className='home-cv-link' onClick={() => window.open('https://linkedin.com/in/robyn-pines-2a813850', '_blank')}>LinkedIn</a> {''}
+        or <a className='home-cv-link' onClick={() => window.open('mailto:rbursnell@gmail.com')}>Email</a></h3>
       </div>
      </div>
      </div>

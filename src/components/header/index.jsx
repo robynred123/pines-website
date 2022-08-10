@@ -27,7 +27,6 @@ const Header = () => {
           onClick={"https://github.com/robynred123"}
           icon={"GitHub"}
         />
-        {/*<LogoButton onClick={"/cv"} icon={"CV"} />*/}
      </div>
     </header>
   );
