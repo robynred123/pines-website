@@ -52,8 +52,9 @@ export const Home = () => {
       })}
      </div>
      <div className='home-cv-container'>
-      <Link to="https://drive.google.com/uc?export=download&id=<1d_35XuZetaVdmdy162hWWf1-b40UCj8iRbHt2Q8da-4>">
-      </Link>
+        <a onClick={() => window.open("https://docs.google.com/document/d/1d_35XuZetaVdmdy162hWWf1-b40UCj8iRbHt2Q8da-4/edit?usp=sharing", "_blank")}>
+          <h5>Download my CV</h5> 
+        </a>
      </div>
      </div>
     </Layout>
