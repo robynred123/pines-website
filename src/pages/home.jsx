@@ -57,7 +57,7 @@ export const Home = () => {
       </button>
       <div className='home-cv-text'>
       <h3>This button will open a new window to a Google Docs copy of my CV. <br/>
-        This document will be the most up to date copy of my CV, <br/> however if you would like to know more about what I'm currently working on, please reach out via LinkedIn or Email</h3>
+        If you would like to know more about what I'm currently working on, please reach out via LinkedIn or Email</h3>
       </div>
      </div>
      </div>
