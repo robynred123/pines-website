@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #4CBDB2;
+  height: 7em;
+  padding: 10px 20px;
+
+  .title-container {
+    display: flex;
+    text-align: center;
+    width: 50%;
+  }
+
+  .link {
+    color: #FEE9D7;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
+}
