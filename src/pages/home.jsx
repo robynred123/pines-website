@@ -26,9 +26,7 @@ export const Home = () => {
 
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
+      } 
     }
   }
 
@@ -37,11 +35,13 @@ export const Home = () => {
   return (
     <Layout>
     <div id='home-content'>
+
      <div className='home-content-one'>
       <div className='home-photo-container'>
         <img src={PersonalPhoto} className='home-photo' alt="A photo of myself" />
       </div>
      </div>
+
      <div className='home-content-two'>
       {bioDisplay.map(bio => {
         return (
@@ -51,7 +51,8 @@ export const Home = () => {
         )
       })}
      </div>
-     <div className='home-cv-container'>
+
+     <div className='home-content-three'>
       <button className='cv-button' onClick={() => window.open("https://docs.google.com/document/d/1d_35XuZetaVdmdy162hWWf1-b40UCj8iRbHt2Q8da-4/edit?usp=sharing", "_blank")}>
         <h5 className='cv-button-text'>View My CV</h5> 
       </button>

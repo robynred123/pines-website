@@ -55,7 +55,7 @@
   }
 }
 
-.home-cv-container {
+.home-content-three {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,6 +98,16 @@
     .home-cv-link {
       color: #F6C3A0;
     }
+
+    .home-cv-link:hover {
+      color: #EA99A4;
+    }
+  }
+
+  .home-content-four {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -122,7 +132,7 @@
       }
     }
 
-    .home-cv-container {
+    .home-content-three {
       flex-direction: column;
       justify-content: center;
       width: 100%;
