@@ -116,6 +116,14 @@
   height: 100%;
   background-color: #FEE9D7;
   padding: 20px 40px;
+
+  // attempt to override default styling
+  .devItem {
+    border: none !important;
+    background-color: #4CBDB2 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
