@@ -154,6 +154,8 @@
     }
 
     .home-content-four {
+      flex-direction: column;
+      justify-content: center;
       padding: 20px;
     }
   }
